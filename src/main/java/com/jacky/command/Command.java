@@ -6,7 +6,7 @@ import org.apache.commons.cli.*;
  * @Authror jacky
  * @create 2019-04-21
  */
-public class Demo {
+public class Command {
     /**
      * 程序开始执行时program arguments 中输入 -f value 的话会获取到value的值
      *
