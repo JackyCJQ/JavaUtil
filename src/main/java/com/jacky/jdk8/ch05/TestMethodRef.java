@@ -21,11 +21,7 @@ import java.util.function.*;
  * ①方法引用所引用的方法的参数列表与返回值类型，需要与函数式接口中抽象方法的参数列表和返回值类型保持一致！
  * ②若Lambda 的参数列表的第一个参数，是实例方法的调用者，第二个参数(或无参)是实例方法的参数时，格式： ClassName::MethodName
  * <p>
-<<<<<<< HEAD
  * 二、构造器引用 :构造器的参数列表，需要与函数式接口中抽象方法参数列表保持一致！
-=======
- * 二、构造器引用 :构造器的参数列表，需要与函数式接口中参数列表保持一致！
->>>>>>> 925978a659c761d6250718d90e4a959908e3ce8f
  * <p>
  * 1. 类名 :: new
  * <p>
@@ -121,11 +117,12 @@ public class TestMethodRef {
     //数组的引用
     @Test
     public void test8() {
-    Function<Integer, String[]> fun = (args) -> new String[args];
+        Function<Integer, String[]> fun = (args) -> new String[args];
         String[] strings = fun.apply(10);
         System.out.println(strings.length);
         System.out.println("--------------");
-        Function<Integer, Employee[]> fun2= Employee[]::new;;
+        Function<Integer, Employee[]> fun2 = Employee[]::new;
+        ;
         Employee[] employees = fun2.apply(20);
         System.out.println(employees.length);
 

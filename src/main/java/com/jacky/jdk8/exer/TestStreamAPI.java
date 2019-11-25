@@ -1,6 +1,5 @@
 package com.jacky.jdk8.exer;
 
-import com.jacky.ch06.Employee;
 
 import java.util.Arrays;
 import java.util.List;
@@ -16,7 +15,7 @@ public class TestStreamAPI {
      * 1。给定一个数字列表，如果返回一个由每个数的平方构成的列表
      * 给定[1,2,3,4,5]，应该返回[1,4,9,16,25]
      */
-    @Test
+    @org.junit.Test
     public void test() {
         Integer[] nums = new Integer[]{1, 2, 3, 4, 5};
         List<Integer> collect = Arrays.stream(nums).map((x) -> x * x).collect(Collectors.toList());
@@ -35,8 +34,9 @@ public class TestStreamAPI {
             new Employee(104, "赵六", 8, 7777.77, Employee.Status.FREE),
             new Employee(105, "田七", 38, 5555.55, Employee.Status.BUSY)
     );
-    @Test
-    public  void test2(){
+
+    @org.junit.Test
+    public void test2() {
         Optional<Integer> integer = emps.stream().map(e -> 1).reduce(Integer::sum);
         System.out.println(integer.get());
     }

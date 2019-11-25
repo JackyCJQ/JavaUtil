@@ -4,9 +4,7 @@ import org.junit.Test;
 
 import java.util.*;
 
-/**
- * @auther
- */
+
 public class TestLambda {
     //原来的匿名内部类
     @Test
@@ -126,9 +124,10 @@ public class TestLambda {
             System.out.println(employee);
         }
     }
+
     //优化方式四， stream API
     @Test
-    public void test7(){
-        employees.stream().filter(e->e.getSalary()<=5000).forEach(System.out::println);
+    public void test7() {
+        employees.stream().filter(e -> e.getSalary() <= 5000).forEach(System.out::println);
     }
 }

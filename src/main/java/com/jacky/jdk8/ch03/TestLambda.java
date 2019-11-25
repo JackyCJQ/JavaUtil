@@ -58,10 +58,10 @@ public class TestLambda {
     //对于两个long型数据进行处理
     @Test
     public void test03() {
-        op(12l, 13l, (x, y) -> {
+        op(12L, 13L, (x, y) -> {
             return x + y;
         });
-        op(12l, 13l, (x, y) -> {
+        op(12L, 13L, (x, y) -> {
             return x - y;
         });
     }

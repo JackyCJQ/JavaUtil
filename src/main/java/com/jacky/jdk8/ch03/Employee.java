@@ -1,9 +1,5 @@
 package com.jacky.jdk8.ch03;
 
-/**
- * @Authror jacky
- * @create 2019-03-11
- */
 public class Employee {
     private String name;
     private Integer age;

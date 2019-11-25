@@ -1,6 +1,6 @@
 package com.jacky.jdk8.ch11;
 
-import com.sun.istack.internal.NotNull;
+import org.jetbrains.annotations.NotNull;
 import org.junit.Test;
 
 import java.lang.reflect.Method;

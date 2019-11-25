@@ -1,6 +1,4 @@
 package com.jacky.jdk8.ch08;
-
-import com.jacky.ch06.Employee;
 import org.junit.Test;
 
 import java.util.Optional;
@@ -46,6 +44,7 @@ public class TestOptional {
         Optional<Employee> op1 = Optional.ofNullable(null);
         System.out.println(op1.get());
     }
+
     @Test
     public void test4() {
         //如果不为空则返回，否则不做任何操作
@@ -60,8 +59,9 @@ public class TestOptional {
         //通过方法去调用
         Employee employee1 = op.orElseGet(() -> new Employee());
     }
+
     @Test
-    public void test5(){
+    public void test5() {
         Optional<Employee> op = Optional.ofNullable(new Employee(102, "李四", 59, 6666.66, Employee.Status.BUSY));
         Optional<String> optional = op.map(e -> e.getName());
         System.out.println(optional.get());
@@ -70,8 +70,9 @@ public class TestOptional {
         Optional<String> optional1 = op1.map(e -> e.getName());
         System.out.println(optional1.get());
     }
+
     @Test
-    public void test6(){
+    public void test6() {
         Optional<Employee> op2 = Optional.ofNullable(new Employee(102, "李四", 59, 6666.66, Employee.Status.BUSY));
         Optional<String> s = op2.flatMap(e -> Optional.of(e.getName()));
         System.out.println(s.get());
