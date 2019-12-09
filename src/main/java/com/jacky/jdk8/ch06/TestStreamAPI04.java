@@ -42,19 +42,21 @@ public class TestStreamAPI04 {
         System.out.println(match2);
         System.out.println("--------------------------");
         Optional<Employee> op = emps.stream().sorted((e1, e2) -> {
-           return Double.compare(e1.getSalary(), e2.getSalary());
+            return Double.compare(e1.getSalary(), e2.getSalary());
         }).findFirst();
         System.out.println(op.get());
         System.out.println("--------------------------");
         Optional<Employee> any = emps.stream().filter(e -> e.getStatus().equals(Employee.Status.FREE)).findAny();
         System.out.println(any.get());
     }
+
     @Test
-    public void test1(){
+    public void test1() {
         long count = emps.stream().count();
         System.out.println(count);
         System.out.println("-------------------");
         Optional<Employee> max = emps.stream().max((e1, e2) -> Double.compare(e1.getSalary(), e2.getSalary()));
+        //判断是否存在：max.isPresent()
         System.out.println(max.get());
         System.out.println("-------------------");
         Optional<Double> min = emps.stream().map(Employee::getSalary).min(Double::compare);

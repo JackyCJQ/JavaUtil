@@ -6,6 +6,8 @@ import java.util.*;
 
 
 public class TestLambda {
+
+
     //原来的匿名内部类
     @Test
     public void test1() {
@@ -25,7 +27,7 @@ public class TestLambda {
     @Test
     public void test2() {
         Comparator<Integer> com = (x, y) -> Integer.compare(x, y);
-        TreeSet<Integer> ts = new TreeSet<>(com);
+        TreeSet<Integer> ts = new TreeSet<Integer>(com);
         ts.add(3);
         ts.add(2);
         System.out.println(ts);
@@ -38,8 +40,6 @@ public class TestLambda {
             new Employee("赵六", 16, 3333.99),
             new Employee("田七", 8, 555.99)
     );
-
-
     @Test
     public void test3() {
         List<Employee> employees = filterEmployees(this.employees);

@@ -92,6 +92,8 @@ public class TestStreamAPI {
 
     @Test
     public void test5() {
+        emps.stream().filter(e -> e.getSalary() > 5000).forEach(System.out::println);
+        System.out.println("-----------");
         //跳过前两个
         emps.parallelStream().
                 filter(e -> e.getSalary() > 5000).skip(2).forEach(System.out::println);
@@ -99,6 +101,9 @@ public class TestStreamAPI {
 
     @Test
     public void test6() {
+        emps.stream().forEach(System.out::println);
+        System.out.println("-------------");
+        //实际上是调用对象的equals方法
         emps.stream().distinct().forEach(System.out::println);
     }
 

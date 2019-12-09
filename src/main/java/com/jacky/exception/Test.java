@@ -34,19 +34,38 @@ public class Test {
     }
 
     @org.junit.Test
-    public void test2(){
-        StringReference reference=new StringReference();
+    public void test2() {
+        StringReference reference = new StringReference();
         Type type = reference.getRawType();
         System.out.println(type.getTypeName());
     }
+
     @org.junit.Test
-    public void test3(){
+    public void test3() {
         System.out.println(Demo.class.getTypeParameters().length);
     }
 
     @org.junit.Test
-    public void test4(){
+    public void test4() {
         System.out.println(Inter1.class.getInterfaces().length);
     }
+
+
+    @org.junit.Test
+    public void test5() {
+        try {
+            String data = null;
+            Assert.notNull(data, 250, "error");
+
+            System.out.println("aa");
+        } catch (OpsException e) {
+            System.out.println("opsException:" + e.getCode() + "," + e.getMessage());
+
+        } catch (Exception e) {
+
+            System.out.println("exception");
+        }
+    }
+
 
 }
