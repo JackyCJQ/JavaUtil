@@ -10,5 +10,6 @@ public class calc {
     public void test(){
         int ridingTime=32;
         System.out.println(ridingTime/30);
+
     }
 }

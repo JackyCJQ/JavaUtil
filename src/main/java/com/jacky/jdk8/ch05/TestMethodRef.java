@@ -53,6 +53,12 @@ public class TestMethodRef {
         System.out.println("------------");
         Supplier<String> sup2 = emp::getName;
         System.out.println(sup2.get());
+
+
+
+
+
+
     }
 
     @Test
